@@ -1,16 +1,66 @@
-POP
-POP PlayStation
-PS4 EXPLOIT HOST
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>POP PlayStation | PS4 Exploit Host</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+var histlength = history.length;
+history.go(-histlength + 2);
+</script>
 
-SELECT YOUR FIRMWARE
-Choose the firmware version installed on your PS4
-GoldHEN Multi FW 5.05 FW v2.5 6.72 FW GoldHEN 6.72 FW v3.0 9.00 FW GoldHEN 9.00 FW v3.0 Restore Host
-For Donations
-POP PLAYSTATION • A special thanks to all the developers on the scene.
-SUPPORT THE DEVELOPERS
-Bitcoin (BTC)
-bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm
-Ethereum (ETH)
-0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c
-Return
-POP PLAYSTATION — PS4
+<header class="site-header">
+  <div class="brand-mark" aria-hidden="true">POP</div>
+  <h1 id="msgs">POP <span>PlayStation</span></h1>
+  <p class="tagline">PS4 EXPLOIT HOST</p>
+  <div class="red-line"></div>
+</header>
+
+<main id="menu" class="panel">
+  <h2 class="section-title">SELECT YOUR FIRMWARE</h2>
+  <p class="section-subtitle">Choose the firmware version installed on your PS4</p>
+
+  <div class="button-grid">
+    <button class="btn btn-multi" onmouseover="msgs.innerHTML='POP PlayStation — GoldHEN Multi Firmware'" onmouseout="msgs.innerHTML='POP PlayStation'" onclick="location.replace('g2all/index.html')">GoldHEN Multi FW</button>
+    <button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 Firmware Host v2.5'" onmouseout="msgs.innerHTML='POP PlayStation'" onclick="location.replace('505/index.html')">5.05 FW v2.5</button>
+    <a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 GoldHEN Host'" onmouseout="msgs.innerHTML='POP PlayStation'">6.72 FW GoldHEN</button></a>
+    <a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 Firmware Host v3.0'" onmouseout="msgs.innerHTML='POP PlayStation'">6.72 FW v3.0</button></a>
+    <a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 GoldHEN Host'" onmouseout="msgs.innerHTML='POP PlayStation'">9.00 FW GoldHEN</button></a>
+    <a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 Firmware Host v3.0'" onmouseout="msgs.innerHTML='POP PlayStation'">9.00 FW v3.0</button></a>
+    <button class="btn btn-secondary" onmouseover="msgs.innerHTML='Restore Host to User Guide'" onmouseout="msgs.innerHTML='POP PlayStation'" onclick="location.replace('restore/index.html')">Restore Host</button>
+  </div>
+
+  <button class="btn btn-donate" onmouseover="msgs.innerHTML='Support the project'" onmouseout="msgs.innerHTML='POP PlayStation'" onclick="donations()">For Donations</button>
+
+  <p class="credits">POP PLAYSTATION <span>•</span> A special thanks to all the developers on the scene.</p>
+</main>
+
+<section id="crypto" class="panel crypto-panel">
+  <h2 class="section-title">SUPPORT THE DEVELOPERS</h2>
+  <h3>Bitcoin (BTC)</h3>
+  <img src="btc.jpg" width="150" height="150" alt="Bitcoin QR code">
+  <p class="wallet">bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm</p>
+  <h3>Ethereum (ETH)</h3>
+  <img src="eth.jpg" width="150" height="150" alt="Ethereum QR code">
+  <p class="wallet">0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</p>
+  <button class="btn" onclick="load_menu()">Return</button>
+</section>
+
+<footer class="footer">POP PLAYSTATION <span>—</span> PS4</footer>
+
+<script>
+function donations() {
+  document.getElementById("crypto").style.display = "block";
+  document.getElementById("menu").style.display = "none";
+}
+function load_menu() {
+  document.getElementById("menu").style.display = "block";
+  document.getElementById("crypto").style.display = "none";
+}
+</script>
+</body>
+</html>
