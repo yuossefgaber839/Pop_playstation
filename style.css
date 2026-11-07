@@ -1,91 +1,191 @@
 html {
-    background-image: url('img.jpg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: #24272b;
-    color: white;
+    min-height: 100%;
+    background: #090909;
+    color: #f5f5f5;
     text-align: center;
-    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 22px 14px 18px;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(155, 18, 28, 0.28), transparent 55%),
+        linear-gradient(180deg, #171012 0%, #090909 52%, #10090a 100%);
+}
+
+.site-header {
+    padding: 12px 10px 24px;
+}
+
+.brand-mark {
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 14px;
+    border: 2px solid #c7a2a2;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #b51e2b, #4a0b12);
+    color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 78px;
+    letter-spacing: -2px;
+    box-shadow: 0 0 24px rgba(185, 24, 38, 0.25);
 }
 
 h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
-    font-size: 25px;
-    color: white;
+    margin: 0;
+    color: #fff;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #000;
 }
 
-a {
+h1 span {
+    color: #d9434d;
+}
+
+.tagline {
+    margin: 8px 0 17px;
+    color: #bcaeb0;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.red-line {
+    width: min(520px, 85%);
+    height: 2px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent, #b51e2b, transparent);
+}
+
+.panel {
+    width: min(650px, 100%);
+    margin: 0 auto;
+    padding: 25px 20px;
+    border: 1px solid #572329;
+    border-radius: 15px;
+    background: rgba(18, 15, 16, 0.96);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.section-title {
+    margin: 0;
+    color: #e45a63;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    margin: 10px 0 22px;
+    color: #bdb2b3;
+    font-size: 14px;
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-grid a {
+    display: inline-block;
     text-decoration: none;
 }
 
-#progress {
-    display: block;
+.btn {
+    display: inline-block;
+    width: 225px;
+    min-height: 48px;
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid #a83a43;
+    border-radius: 7px;
+    background: linear-gradient(180deg, #8d1823, #5d0d16);
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
-#menu {
-    display: block;
+.btn:hover, .btn:focus {
+    background: linear-gradient(180deg, #b72b37, #79131e);
+}
+
+.btn-multi {
+    border-color: #e0a3a6;
+    background: linear-gradient(180deg, #b42b37, #74121d);
+}
+
+.btn-secondary {
+    background: linear-gradient(180deg, #4c3436, #2b1c1e);
+    border-color: #76585b;
+}
+
+.btn-donate {
+    width: min(460px, 100%);
+    margin-top: 24px;
+    background: linear-gradient(180deg, #333, #171717);
+    border-color: #666;
+}
+
+.credits {
+    margin: 25px 0 0;
+    color: #aaa0a1;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.credits span, .footer span {
+    color: #d9434d;
 }
 
 #crypto {
     display: none;
 }
 
-#tools {
-    display: none;
+.crypto-panel h3 {
+    color: #e45a63;
+    font-size: 17px;
 }
 
-#lnx {
-    display: none;
+.crypto-panel img {
+    max-width: 150px;
+    height: auto;
+    border: 4px solid #fff;
+    border-radius: 5px;
 }
 
-#mods {
-    display: none;
+.wallet {
+    overflow-wrap: anywhere;
+    color: #ddd;
+    font-size: 13px;
 }
 
-.btn {
-    background-color: #003263;
-    color: white;
-    width: 227px;
-    height: 46px;
-    padding-bottom: 5px;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-style: none;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px;
+.crypto-panel .btn {
+    margin-top: 15px;
 }
 
-.btn:hover {
-    background-color: #0069d9;
+.footer {
+    padding: 20px 8px 4px;
+    color: #756b6d;
+    font-size: 11px;
+    letter-spacing: 2px;
 }
 
-.btn-onln {
-    background-color: #076300;
-}
-
-.btn-onln:hover {
-    background-color: #18891b;
-}
-
-.btn-toolbox {
-    background-color: #ae2301;
-}
-
-.btn-toolbox:hover {
-    background-color: #d42a01;
-}
-
-.btn-multi {
-    background-color: #b8860b;
-}
-
-.btn-multi:hover {
-    background-color: #daa520;
+@media (max-width: 520px) {
+    body { padding: 12px 10px; }
+    .panel { padding: 22px 12px; }
+    .btn, .button-grid a { width: 100%; }
+    .button-grid a .btn { width: 100%; }
+    h1 { font-size: 28px; }
 }
